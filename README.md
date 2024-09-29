@@ -78,3 +78,11 @@ https://github.com/Drewplonq/tf2hmwrk/blob/main/main.tf](https://github.com/Drew
 https://github.com/Drewplonq/tf2hmwrk/blob/main/vms_platform.tf
 
 ![image](https://github.com/user-attachments/assets/7749dc76-0a86-4cd6-803c-52f4a3353185)
+
+
+### Задание 4
+
+https://github.com/Drewplonq/tf2hmwrk/blob/main/outputs.tf
+
+![image](https://github.com/user-attachments/assets/774fc3e1-f52b-4367-8607-07ddc52a41e0)
+
