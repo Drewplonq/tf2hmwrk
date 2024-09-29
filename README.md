@@ -16,18 +16,8 @@ core_fraction=5 указывает что вм будет выделено 5 п�
 
 ### Задание 2
 
-
-resource "yandex_vpc_network" "develop" {
-  name = var.vpc_name
-}
-resource "yandex_vpc_subnet" "develop" {
-  name           = var.vpc_name
-  zone           = var.default_zone
-  network_id     = yandex_vpc_network.develop.id
-  v4_cidr_blocks = var.default_cidr
-}
-
-
+## main.tf: 
+```
 data "yandex_compute_image" "ubuntu" {
   family = var.vm_web_fam
 }
@@ -52,5 +42,29 @@ resource "yandex_compute_instance" "platform" {
     nat       = var.vm_web_platform[5]
   }
 
+}
+```
+## varibals.tf:
+```
+variable "vm_web_fam" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "yandex_compute_image"
+}
 
-  ![image](https://github.com/user-attachments/assets/3d7c9eb8-0af4-4f9f-b116-0d5c6a9c20d1)
+variable "vm_web_name" {
+  type        = string
+  default     = "netology-develop-platform-web"
+  description = "yandex_compute_instance"
+}
+
+variable "vm_web_platform" {
+  type        = tuple([ string, number, number, number, bool, bool ])
+  default     = ["standard-v1", 2, 1, 20, true, true]
+  description = "yandex_compute_instance"
+}
+```
+
+
+![image](https://github.com/user-attachments/assets/db718a24-2336-4b1e-8906-96ee12265efe)
+
