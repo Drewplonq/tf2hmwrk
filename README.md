@@ -86,3 +86,9 @@ https://github.com/Drewplonq/tf2hmwrk/blob/main/outputs.tf
 
 ![image](https://github.com/user-attachments/assets/774fc3e1-f52b-4367-8607-07ddc52a41e0)
 
+### Задание 5
+
+https://github.com/Drewplonq/tf2hmwrk/blob/main/locals.tf
+
+
+
