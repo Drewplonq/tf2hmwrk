@@ -44,7 +44,7 @@ resource "yandex_compute_instance" "platform" {
 
 }
 ```
-## varibals.tf:
+## varibables.tf:
 ```
 variable "vm_web_fam" {
   type        = string
