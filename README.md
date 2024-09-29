@@ -84,11 +84,22 @@ https://github.com/Drewplonq/tf2hmwrk/blob/main/vms_platform.tf
 
 https://github.com/Drewplonq/tf2hmwrk/blob/main/outputs.tf
 
-![image](https://github.com/user-attachments/assets/774fc3e1-f52b-4367-8607-07ddc52a41e0)
+![image](https://github.com/user-attachments/assets/f0cf8aec-56e3-4dfe-940a-41f1dc2c632a)
+
 
 ### Задание 5
 
 https://github.com/Drewplonq/tf2hmwrk/blob/main/locals.tf
+
+
+### Задание 6
+
+https://github.com/Drewplonq/tf2hmwrk/blob/main/main.tf
+
+https://github.com/Drewplonq/tf2hmwrk/blob/main/vms_platform.tf
+
+![image](https://github.com/user-attachments/assets/10fe51a1-5b34-4e19-9455-d4fa097069cc)
+
 
 
 
