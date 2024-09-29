@@ -68,3 +68,13 @@ variable "vm_web_platform" {
 
 ![image](https://github.com/user-attachments/assets/db718a24-2336-4b1e-8906-96ee12265efe)
 
+
+
+### Задание 3
+
+https://github.com/Drewplonq/tf2hmwrk/blob/main/main.tf](https://github.com/Drewplonq/tf2hmwrk/blob/main/main.tf)](https://github.com/Drewplonq/tf2hmwrk/blob/main/main.tf)
+
+
+https://github.com/Drewplonq/tf2hmwrk/blob/main/vms_platform.tf
+
+![image](https://github.com/user-attachments/assets/7749dc76-0a86-4cd6-803c-52f4a3353185)
