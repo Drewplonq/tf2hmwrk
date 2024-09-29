@@ -15,11 +15,11 @@ data "yandex_compute_image" "ubuntu" {
 }
 resource "yandex_compute_instance" "platform" {
   name        = local.vm_web
-  platform_id = var.vm_web_platform[0]
+  platform_id = var.vms_resources.web.platform_id
   resources {
-    cores         = var.vm_web_platform[1]
-    memory        = var.vm_web_platform[2]
-    core_fraction = var.vm_web_platform[3]
+    cores         = var.vms_resources.web.cores
+    memory        = var.vms_resources.web.memory
+    core_fraction = var.vms_resources.web.core_fraction
   }
   boot_disk {
     initialize_params {
@@ -27,17 +27,14 @@ resource "yandex_compute_instance" "platform" {
     }
   }
   scheduling_policy {
-    preemptible = var.vm_web_platform[4]
+    preemptible = var.vms_resources.web.preemptible
   }
   network_interface {
     subnet_id = yandex_vpc_subnet.develop.id
-    nat       = var.vm_web_platform[5]
+    nat       = var.vms_resources.web.nat
   }
 
-  metadata = {
-    serial-port-enable = 1
-    ssh-keys           = "ubuntu:${var.vms_ssh_root_key}"
-  }
+  metadata = var.vms_metadata
 
 }
 resource "yandex_vpc_network" "db" {
@@ -55,12 +52,12 @@ data "yandex_compute_image" "ubuntu_db" {
 }
 resource "yandex_compute_instance" "db" {
   name        = local.vm_db
-  platform_id = var.vm_db_platform[0]
+  platform_id = var.vms_resources.db.platform_id
   zone           = var.default_zone_2
   resources {
-    cores         = var.vm_db_platform[1]
-    memory        = var.vm_db_platform[2]
-    core_fraction = var.vm_db_platform[3]
+    cores         = var.vms_resources.db.cores
+    memory        = var.vms_resources.db.memory
+    core_fraction = var.vms_resources.db.core_fraction
   }
   boot_disk {
     initialize_params {
@@ -68,15 +65,13 @@ resource "yandex_compute_instance" "db" {
     }
   }
   scheduling_policy {
-    preemptible = var.vm_db_platform[4]
+    preemptible = var.vms_resources.db.preemptible
   }
   network_interface {
     subnet_id = yandex_vpc_subnet.db.id
-    nat       = var.vm_db_platform[5]
+    nat       = var.vms_resources.db.nat
   }
 
-  metadata = {
-    serial-port-enable = 1
-    ssh-keys           = "ubuntu:${var.vms_ssh_root_key}"
-  }
+  metadata = var.vms_metadata
+  
 }  
